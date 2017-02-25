@@ -12,3 +12,6 @@ Les dossiers :
 * images - Worksphop medias
 * include - Worksphop js
 * YYYY-MM-DD.* - Dossiers contenant le travail des enfants
+
+Pour l'atelier prévoir un éditeur de texte par exemple `https://notepad-plus-plus.org/`
+
