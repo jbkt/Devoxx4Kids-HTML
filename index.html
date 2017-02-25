@@ -7,7 +7,7 @@
 		<style>
 		body {
 			font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-			font-size: 14px;
+			font-size: 20px;
 			line-height: 1.42857;
 			color: #333;
 			padding-left: 30px;
@@ -34,17 +34,16 @@
 		h1 {
 			background-image: url(images/devoxx4kids.png);
 			background-repeat: no-repeat;
+			font-size: 200%;
 			width: 1000px;
 			height: 351px;
 			}
 		pre {
 			font-family: "Courier 10 Pitch", Courier, monospace;
-			font-size: 95%;
+			font-size: 20px;
 			line-height: 140%;
 			white-space: pre;
 			white-space: pre-wrap;
-			white-space: -moz-pre-wrap;
-			white-space: -o-pre-wrap;
 			border: 1px solid #ccc;
 			overflow: auto;
 			padding: 1em 5em 1em 5em;
@@ -57,8 +56,6 @@
 			line-height: 140%;
 			white-space: pre;
 			white-space: pre-wrap;
-			white-space: -moz-pre-wrap;
-			white-space: -o-pre-wrap;
 		}
 		#content code {
 			display: block;
@@ -67,12 +64,15 @@
 		}
 		p code {
 			background: none;
-			color: blues;
+			color: blue;
 		}
 		</style>
+		<script src="includes/gmap.js"></script>
 	</head>
 	<body>
 		<h1>&lt;HTML/&gt;</h1>
+
+
 
 		<!--
 		*****************************************
@@ -98,7 +98,7 @@
 		** Introduction de la notion de page **
 		***************************************
 		-->
-		<h2>Création d'une page : </h2>
+		<h2>Création d'une page :</h2>
 		<p>Pour créer une page il faut commencer par la balise <code>html</code>:</p>
 		<pre><code>&lt;html&gt;&lt;/html&gt;</code></pre>
 
@@ -110,7 +110,7 @@
 		<pre><code>
 &lt;html&gt;
   &lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
     &lt;title&gt; Mon titre &lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -146,6 +146,13 @@
 &lt;h2&gt;Moins gros titre&lt;/h2&gt;
 		</code></pre>
 
+
+
+		<!--
+		*****************************
+		** Mise en oeuvre du texte **
+		*****************************
+		-->
 		<h2>Le texte</h2>
 
 		<p>Vous pouvez écrire du texte dans une balise <code>p</code></p>
@@ -172,6 +179,7 @@ href="http://info.cern.ch/" target="_blank">premier site WEB</a>&lt;/a&gt;.
 		</code></pre>
 
 
+
 		<!--
 		****************************************
 		** Mise en oeuvre de l'attribut style **
@@ -193,6 +201,7 @@ href="http://info.cern.ch/" target="_blank">premier site WEB</a>&lt;/a&gt;.
 		<pre><code>
 &lt;body style=&quot;background-image: linear-gradient(white, black);&quot;&gt;
 		</code></pre>
+
 
 
 		<!--
@@ -217,8 +226,12 @@ href="http://info.cern.ch/" target="_blank">premier site WEB</a>&lt;/a&gt;.
 		</p>
 		<pre><code>
 &lt;img style=&quot;width:500px;&quot; src=&quot;http://urlDeLimage&quot; /&gt;
+		</code></pre>
+		<p>Par exemple</p>
+		<pre><code>
 &lt;img style=&quot;width:500px;&quot; src=&quot;images/favicon.png&quot; /&gt; <img style="width:30px;" src="images/favicon.png" alt="Devoxx4Kids play with HTML"/>
 		</code></pre>
+
 
 
 		<!--
@@ -232,6 +245,34 @@ href="http://info.cern.ch/" target="_blank">premier site WEB</a>&lt;/a&gt;.
 &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; href=&quot;favicon.png&quot; /&gt;
 		</code></pre>
 
+
+
+		<!--
+		**************************************************************
+		** Introduction à Javascript et à l'utilisation de services **
+		**************************************************************
+		-->
+		<h2>Pour aller plus loin, utiliser des services existant</h2>
+		<p>
+			Ajouter dans notre page, la localisation de notre atelier en utilisant
+			Google Map
+		<p>
+		<script>
+			gmap("Square Galileo Galilei, Route de Meyrin 385, 1217 Meyrin, Suisse");
+		</script>
+		<p>mettre dans la section <code>head</code> :</p>
+		<pre><code>
+&lt;script src="includes/gmap.js"/&gt;&lt;/script&gt;
+		</code></pre>
+		<p>mettre dans la section <code>body</code> là où vous voulez mettre la carte:</p>
+		<pre><code>
+&lt;script&gt;
+	gmap("Square Galileo Galilei, Route de Meyrin 385, 1217 Meyrin, Suisse");
+&lt;/script&gt;
+		</code></pre>
+
+
+
 		<!--
 		**************
 		** Materiel **
@@ -239,19 +280,18 @@ href="http://info.cern.ch/" target="_blank">premier site WEB</a>&lt;/a&gt;.
 		-->
 		<h2>Quelques liens</h2>
 		<ul>
-  			<li><a href="http://www.icone-gif.com/" target="_blank">http://www.icone-gif.com/</a> - Des images</li>
-  			<li><a href="http://www.toutimages.com/" target="_blank">http://www.toutimages.com/</a> - Encore des images</li>
-  			<li><a href="http://www.colorpicker.com/" target="_blank">http://www.colorpicker.com/</a> - Un outil pour constuire des couleurs</li>
-  			<li><a href="https://validator.w3.org/#validate_by_input" target="_blank">https://validator.w3.org/</a> - Vérifier le code HTML</li>
+			<li><a href="http://www.icone-gif.com/" target="_blank">http://www.icone-gif.com/</a> - Des images</li>
+			<li><a href="http://www.toutimages.com/" target="_blank">http://www.toutimages.com/</a> - Encore des images</li>
+			<li><a href="http://www.colorpicker.com/" target="_blank">http://www.colorpicker.com/</a> - Un outil pour constuire des couleurs</li>
+			<li><a href="https://validator.w3.org/#validate_by_input" target="_blank">https://validator.w3.org/</a> - Vérifier le code HTML</li>
 		</ul>
 
-        <h6>
-        [
-        <a href="http://devoxx4kids.ch/" target="_blank">Devoxx4Kids CH</a>
-        |
-        <a href="http://www.devoxx4kids.org"  target="_blank">Devoxx4Kids</a>
-        ]
-        </h6>
+		<h6>
+		[
+		<a href="http://devoxx4kids.ch/" target="_blank">Devoxx4Kids CH</a>
+		|
+		<a href="http://www.devoxx4kids.org"  target="_blank">Devoxx4Kids</a>
+		]
+		</h6>
 	</body>
 </html>
-
