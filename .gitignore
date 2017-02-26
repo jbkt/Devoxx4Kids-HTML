@@ -3,4 +3,6 @@
 .settings/
 .~lock.*
 Devoxx4Kids-pptx-template.potx
+npp.*.bin
+npp.*.bin.x64
 npp.*.zip
